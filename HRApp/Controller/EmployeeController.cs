@@ -1,4 +1,5 @@
-﻿using Services.Services;
+﻿using Domain.Models;
+using Services.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,9 +25,25 @@ namespace HRApp.Controller
           
             writeEmployeeAge: Helper.consolemessage(ConsoleColor.Cyan, ConsoleMessages.writeEmployeSalary);
             string selectedSalary = Console.ReadLine();
-            int Salary;
-            bool checkAge = int.TryParse(selectedSalary, out Salary);
+            double salary;
+            bool checkSalary = double.TryParse(selectedSalary, out salary);
 
+            if (checkSalary)
+            {
+                Employee newemployee = new Employee();
+                newemployee.Name = name;
+                newemployee.Salary = salary;
+                Employee employee = employeeService.Create(newemployee);
+
+                    Helper.consolemessage(ConsoleColor.Blue,
+                    $"Following Employee Created\n " +
+                    $"{newemployee.Id} " +
+                    $"{newemployee.Name}  " +
+                    $"{newemployee.Salary}");
+            }
+
+        
+           
         }
 
 

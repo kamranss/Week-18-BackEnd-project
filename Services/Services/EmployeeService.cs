@@ -19,12 +19,12 @@ namespace Services.Services
             employeeRepository = new EmployeeRepository();
             departmentService = new DepartmentService();
         }
-        public Employee Create(Employee employee, string departmentName)
+        public Employee Create(Employee employee)
         {
+            Id++;
+            employee.Id = Id;
             if (employeeRepository.Create(employee))
-            {
-                Id++;
-                employee.Id = Id;
+            {              
                 return employee;
             }
             return null;

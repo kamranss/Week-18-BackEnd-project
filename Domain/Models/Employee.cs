@@ -12,16 +12,18 @@ namespace Domain.Models
     {
         public int? Id { get ; set ; }
         public string Name { get; set; }
-        public decimal Salary { get; set; }
-        public Department department;
+        public double Salary { get; set; }
 
-        public void ShofInfo()
-        {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"Id: {Id} || Name: {Name} || Salary: {Salary} || Department: {department} ");
-            Console.ResetColor();
-        }
-        [JsonIgnore]
+
+
+        
+        //public void ShofInfo()
+        //{
+        //    Console.ForegroundColor = ConsoleColor.Green;
+        //    Console.WriteLine($"Id: {Id} || Name: {Name} || Salary: {Salary} || Department: {department} ");
+        //    Console.ResetColor();
+        //}
+        
         
     }
 }
