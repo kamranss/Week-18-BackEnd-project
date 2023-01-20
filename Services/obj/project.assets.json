@@ -15,22 +15,6 @@
           }
         }
       },
-      "Newtonsoft.Json.Bson/1.0.2": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "12.0.1"
-        },
-        "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.Bson.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -53,30 +37,6 @@
         },
         "runtime": {
           "bin/placeholder/Domain.dll": {}
-        }
-      },
-      "Services/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "DataAccess": "1.0.0",
-          "Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Services.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Services.dll": {}
-        }
-      },
-      "Utilities/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/Utilities.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Utilities.dll": {}
         }
       }
     }
@@ -121,27 +81,6 @@
         "newtonsoft.json.nuspec"
       ]
     },
-    "Newtonsoft.Json.Bson/1.0.2": {
-      "sha512": "QYFyxhaABwmq3p/21VrZNYvCg3DaEoN/wUuw5nmfAf0X3HLjgupwhkEWdgfb9nvGAUIv3osmZoD3kKl4jxEmYQ==",
-      "type": "package",
-      "path": "newtonsoft.json.bson/1.0.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.md",
-        "lib/net45/Newtonsoft.Json.Bson.dll",
-        "lib/net45/Newtonsoft.Json.Bson.pdb",
-        "lib/net45/Newtonsoft.Json.Bson.xml",
-        "lib/netstandard1.3/Newtonsoft.Json.Bson.dll",
-        "lib/netstandard1.3/Newtonsoft.Json.Bson.pdb",
-        "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
-        "lib/netstandard2.0/Newtonsoft.Json.Bson.dll",
-        "lib/netstandard2.0/Newtonsoft.Json.Bson.pdb",
-        "lib/netstandard2.0/Newtonsoft.Json.Bson.xml",
-        "newtonsoft.json.bson.1.0.2.nupkg.sha512",
-        "newtonsoft.json.bson.nuspec"
-      ]
-    },
     "DataAccess/1.0.0": {
       "type": "project",
       "path": "../DataAccess/DataAccess.csproj",
@@ -151,23 +90,12 @@
       "type": "project",
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
-    },
-    "Services/1.0.0": {
-      "type": "project",
-      "path": "../Services/Services.csproj",
-      "msbuildProject": "../Services/Services.csproj"
-    },
-    "Utilities/1.0.0": {
-      "type": "project",
-      "path": "../Utilities/Utilities.csproj",
-      "msbuildProject": "../Utilities/Utilities.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Newtonsoft.Json.Bson >= 1.0.2",
-      "Services >= 1.0.0",
-      "Utilities >= 1.0.0"
+      "DataAccess >= 1.0.0",
+      "Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -176,11 +104,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kamra\\source\\repos\\HRApp\\HRApp\\HRApp.csproj",
-      "projectName": "HRApp",
-      "projectPath": "C:\\Users\\kamra\\source\\repos\\HRApp\\HRApp\\HRApp.csproj",
+      "projectUniqueName": "C:\\Users\\kamra\\source\\repos\\HRApp\\Services\\Services.csproj",
+      "projectName": "Services",
+      "projectPath": "C:\\Users\\kamra\\source\\repos\\HRApp\\Services\\Services.csproj",
       "packagesPath": "C:\\Users\\kamra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kamra\\source\\repos\\HRApp\\HRApp\\obj\\",
+      "outputPath": "C:\\Users\\kamra\\source\\repos\\HRApp\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kamra\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -197,11 +125,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\kamra\\source\\repos\\HRApp\\Services\\Services.csproj": {
-              "projectPath": "C:\\Users\\kamra\\source\\repos\\HRApp\\Services\\Services.csproj"
+            "C:\\Users\\kamra\\source\\repos\\HRApp\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\kamra\\source\\repos\\HRApp\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\kamra\\source\\repos\\HRApp\\Utilities\\Utilities.csproj": {
-              "projectPath": "C:\\Users\\kamra\\source\\repos\\HRApp\\Utilities\\Utilities.csproj"
+            "C:\\Users\\kamra\\source\\repos\\HRApp\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\kamra\\source\\repos\\HRApp\\Domain\\Domain.csproj"
             }
           }
         }
@@ -215,12 +143,6 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
-        "dependencies": {
-          "Newtonsoft.Json.Bson": {
-            "target": "Package",
-            "version": "[1.0.2, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",

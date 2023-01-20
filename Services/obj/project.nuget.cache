@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "SHq601eAj7DRGDz/coOfzMVVbyvN7Hkj7czEjAToFYCLbyaOqA5Ivs8iuyP1/7uj4iUnNJZbY11BzmEwJfEo/g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kamra\\source\\repos\\HRApp\\Services\\Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kamra\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

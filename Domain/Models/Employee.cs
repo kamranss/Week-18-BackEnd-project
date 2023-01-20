@@ -13,7 +13,7 @@ namespace Domain.Models
         public int? Id { get ; set ; }
         public string Name { get; set; }
         public decimal Salary { get; set; }
-        Department department;
+        public Department department;
 
         public void ShofInfo()
         {
