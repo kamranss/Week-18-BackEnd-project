@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2PnzdAagXJiamwoeVe390b1XAfmz61QqiaFSRgGzMoxjbt/+LCqHwO0e1JJzNo9zrKeAcekjdeQV/dSmWmk64A==",
+  "dgSpecHash": "sgwF0sazNdXAEQJRZQt/NFVtU5EEJYBoIK6s8yRrRXqVBfmJoMsC77rXqTT3GUZOeOazaDNjPM33zxXAzPXt1w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kamra\\source\\repos\\HRApp\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\kamra\\source\\repos\\HRApp\\Week-18-BackEnd-project\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

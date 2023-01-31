@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SHq601eAj7DRGDz/coOfzMVVbyvN7Hkj7czEjAToFYCLbyaOqA5Ivs8iuyP1/7uj4iUnNJZbY11BzmEwJfEo/g==",
+  "dgSpecHash": "L543LQJRDbL40Gl+j/r1sLCa8FJxdZoD9yGkSZh/Rrc84lk1MY6jn8WSUCXQCOW4osqwXypP1bxw2KUagTzJ0g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kamra\\source\\repos\\HRApp\\Services\\Services.csproj",
+  "projectFilePath": "C:\\Users\\kamra\\source\\repos\\HRApp\\Week-18-BackEnd-project\\Services\\Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kamra\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512"
   ],

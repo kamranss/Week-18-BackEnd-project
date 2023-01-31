@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kamra\\source\\repos\\HRApp\\Domain\\Domain.csproj": {}
+    "C:\\Users\\kamra\\source\\repos\\HRApp\\Week-18-BackEnd-project\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kamra\\source\\repos\\HRApp\\Domain\\Domain.csproj": {
+    "C:\\Users\\kamra\\source\\repos\\HRApp\\Week-18-BackEnd-project\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kamra\\source\\repos\\HRApp\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\kamra\\source\\repos\\HRApp\\Week-18-BackEnd-project\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\kamra\\source\\repos\\HRApp\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\kamra\\source\\repos\\HRApp\\Week-18-BackEnd-project\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\kamra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kamra\\source\\repos\\HRApp\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\kamra\\source\\repos\\HRApp\\Week-18-BackEnd-project\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kamra\\AppData\\Roaming\\NuGet\\NuGet.Config",
