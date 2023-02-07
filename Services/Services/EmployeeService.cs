@@ -13,7 +13,7 @@ namespace Services.Services
     {
          private readonly EmployeeRepository employeeRepository;
         private readonly DepartmentService departmentService;
-        private static int Id { get; set; }
+        private static int Id { get; set; } = 1;
         public EmployeeService()
         {
             employeeRepository = new EmployeeRepository();
@@ -45,6 +45,7 @@ namespace Services.Services
                     updatedemployee.Age = employee.Age;
                     updatedemployee.Address = employee.Address;
                     updatedemployee.Department = department;
+                    updatedemployee.Email = employee.Email;
                     employeeRepository.Update(updatedemployee);
                     return updatedemployee;
                 }
@@ -55,52 +56,139 @@ namespace Services.Services
 
         public Employee Delete(Employee employee)
         {
-            throw new NotImplementedException();
+            Employee deleteemployee = employeeRepository.Get(e => e.Id == Id);
+            if (deleteemployee != null)
+            {
+                employeeRepository.Delete(deleteemployee);
+                return deleteemployee;
+            }
+            return null;
         }
 
         public Employee GetById(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Employee employee = employeeRepository.Get(e => e.Id == id);
+                return employee;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
 
         public Employee GetByAge(int age)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Employee employee = employeeRepository.Get(e => e.Age == age);
+                return employee;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
 
         public Employee GetByName(string name)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Employee employee = employeeRepository.Get(e => e.Name == name);
+                return employee;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
 
         public Employee GetBySurname(string surname)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Employee employee = employeeRepository.Get(e => e.Surname == surname);
+                return employee;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
 
         public List<Employee> GetAll(string name)
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Employee> employees = employeeRepository.GetAll(e => e.Name == name);
+                return employees;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
 
         public List<Employee> GetAll()
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Employee> employees = employeeRepository.GetAll();
+                return employees;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
 
         public List<Employee> GetByDepartmentId(int departmentId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Employee> employee = employeeRepository.GetAll(e => e.Department.Id == departmentId);
+                return employee;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
 
         public List<Employee> GetByDepartmentName(Department departmentName)
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Employee> employees = employeeRepository.GetAll(e => e.Department == departmentName);
+                return employees;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
 
         public int GetAllEmployeeCount()
         {
-            throw new NotImplementedException();
+            try
+            {
+                return employeeRepository.Count();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public int GetEmployeeCountByDepartment()

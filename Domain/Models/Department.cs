@@ -11,6 +11,7 @@ namespace Domain.Models
     {
         public int? Id { get ; set; }
         public string Name { get; set; }
-        List<Employee> EmployeeList { get; set; }
+        public int Capacity { get; set; }
+        //List<Employee> EmployeeList { get; set; }
     }
 }

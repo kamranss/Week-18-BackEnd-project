@@ -84,21 +84,57 @@ namespace DataAccess.Repositories
             //    return true;
             //}
             return false;
+
         }
 
         public Employee Get(Predicate<Employee> filter = null)
         {
             throw new NotImplementedException();
+            //try
+            //{
+            //    Employee fakeEmployee = new Employee();
+            //    return filter != null ? AppDbContext.Employees.Find(filter) : fakeEmployee;
+
+            //}
+            //catch (Exception)
+            //{
+
+            //    throw;
+            //}
         }
 
         public List<Employee> GetAll(Predicate<Employee> filter = null)
         {
             throw new NotImplementedException();
+            //try
+            //{
+            //    return filter != null ? AppDbContext.Employees.FindAll(filter) : AppDbContext.Employees;
+            //}
+            //catch (Exception)
+            //{
+
+            //    throw;
+            //}
         }
 
         public bool Update(Employee entity)
         {
             throw new NotImplementedException();
+            //try
+            //{
+            //    Employee employee = Get(emp => emp.Id == entity.Id);
+            //    if (entity != null)
+            //    {
+            //        employee = entity;
+            //        return true;
+            //    }
+            //    return false;
+            //}
+            //catch (Exception)
+            //{
+
+            //    throw;
+            //}
         }
     }
 }

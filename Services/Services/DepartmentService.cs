@@ -44,37 +44,112 @@ namespace Services.Services
 
         public Department Update(Department department, int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Department updatedepartment = departmentRepository.Get(e => e.Id == department.Id);
+                if (updatedepartment != null)
+                {
+                    departmentRepository.Update(updatedepartment);
+                    return updatedepartment;
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         public Department Delete(int Id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Department tempDepartment = departmentRepository.Get(d => d.Id == Id);
+                if (tempDepartment != null)
+                {
+                    departmentRepository.Delete(tempDepartment);
+                    return tempDepartment;
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         public Department Get(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (true)
+                {
+                    Department department = departmentRepository.Get(d => d.Id == id);
+                    return department;
+                }
+                return null;
+            }
+
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         public Department Get(string name)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Department department = departmentRepository.Get(d => d.Name.ToLower() == name.ToLower());
+                return department != null ? department : null;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
 
         public List<Department> GetAllByName(string name)
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Department> tempdepartment = departmentRepository.GetAll(d => d.Name == name);
+                return tempdepartment;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
 
         public List<Department> GetALL()
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Department> departments = departmentRepository.GetAll();
+                return departments;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
 
         public List<Department> GetAllByCapacity(int capacity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Department> department = departmentRepository.GetAll(d => d.Capacity == capacity);
+                return department;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
         }
     }
 }
