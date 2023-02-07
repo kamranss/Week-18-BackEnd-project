@@ -10,5 +10,19 @@ namespace Services.IServices
     public interface IEmployeeService
     {
         Employee Create(Employee employee);
+        Employee Update(int id, Employee employee, string departmentName);
+        Employee Delete(Employee employee);
+        Employee GetById(int id);
+        Employee GetByAge(int age);
+        Employee GetByName(string name);
+        Employee GetBySurname(string surname);
+
+        List<Employee> GetAll(string name);
+        List<Employee> GetAll();
+        List<Employee> GetByDepartmentId(int departmentId);
+        List<Employee> GetByDepartmentName(Department departmentName);
+
+        int GetAllEmployeeCount();
+        int GetEmployeeCountByDepartment();
     }
 }

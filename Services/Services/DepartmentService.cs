@@ -17,6 +17,7 @@ namespace Services.Services
         {
             departmentRepository = new DepartmentRepositroy();
         }
+
         public Department Create(Department department)
         {
             try
@@ -39,6 +40,41 @@ namespace Services.Services
 
                 throw;
             }
+        }
+
+        public Department Update(Department department, int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Department Delete(int Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Department Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Department Get(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Department> GetAllByName(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Department> GetALL()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Department> GetAllByCapacity(int capacity)
+        {
+            throw new NotImplementedException();
         }
     }
 }
