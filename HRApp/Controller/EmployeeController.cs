@@ -51,7 +51,8 @@ namespace HRApp.Controller
         
         public void GetAllEmployees()
         {
-            List<Employee> employeeListInfo = employeeService.GetAll();
+            List<Employee> employeeListInfo = new List<Employee>();
+            employeeService.GetAll();
             int count = 0;
             foreach (var item in employeeListInfo)
             {
@@ -76,7 +77,31 @@ namespace HRApp.Controller
             }
 
         }
+
+        public void DeleteEmployee()
+        {
+            GetAllEmployees();
+            WriteEmployeeIdAgain: Helper.consolemessage(ConsoleColor.Green, ConsoleMessages.writeEmployeeIdForDelete);
+            string selectedId = Console.ReadLine();
+            int id;
+            bool convertedId = int.TryParse(selectedId, out id);
+            if (convertedId)
+            {
+                Employee findEmployee = employeeService.GetById(id);
+                if (findEmployee != null)
+                {
+                    employeeService.Delete(findEmployee);
+                }
+                else
+                {
+                    Helper.consolemessage(ConsoleColor.Red, "Employee not found Please try again");
+                    return;
+                }
+            }
+        }
+
         #region  should be updated
+
         //public void UpdateEmployee()
         //{
         //    GetAllEmployees();
@@ -176,27 +201,7 @@ namespace HRApp.Controller
         //    Helper.consolemessage(ConsoleColor.Green, " The number of employees in Database displayed");
         //    Console.WriteLine(employeeService.GetAllEmployeeCount());
         //}
-        //public void DeleteEmployee()
-        //{
-        //    GetAllEmployees();
-        //WriteEmployeeIdAgain: Helper.consolemessage(ConsoleColor.Green, ConsoleMessages.writeEmployeeIdForDelete);
-        //    string selectedId = Console.ReadLine();
-        //    int id;
-        //    bool convertedId = int.TryParse(selectedId, out id);
-        //    if (convertedId)
-        //    {
-        //        Employee findEmployee = employeeService.GetById(id);
-        //        if (findEmployee != null)
-        //        {
-        //            employeeService.Delete(findEmployee);
-        //        }
-        //        else
-        //        {
-        //            Helper.consolemessage(ConsoleColor.Red, "Employee not found Please try again");
-        //            return;
-        //        }
-        //    }
-        //}
+
         //public void GetEmployeeById()
         //{
 
@@ -226,6 +231,7 @@ namespace HRApp.Controller
         //    }
 
         //}
+
         #endregion
 
     }

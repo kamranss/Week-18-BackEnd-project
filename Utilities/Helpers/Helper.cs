@@ -11,6 +11,8 @@ namespace Utilities.Helpers
         public enum Buttons
         {
             CreateEmployee = 1,
+            DeleteEmployee,
+            UpdateEmployee
            
         }
 

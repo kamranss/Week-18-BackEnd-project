@@ -20,6 +20,15 @@ namespace DataAccess.Repositories
         public int Count()
         {
             throw new NotImplementedException();
+            //try
+            //{
+            //    return AppDbContext.Employees.Count();
+            //}
+            //catch (Exception)
+            //{
+
+            //    throw;
+            //}
         }
 
         public bool Create(Employee entity)
@@ -55,41 +64,52 @@ namespace DataAccess.Repositories
 
         public bool Delete(Employee entity)
         {
-            //string filePath = @"C:\Users\kamra\Desktop\Files\Database.json";
+            string filePath = @"C:\Users\kamra\Desktop\Files\Database.json";
 
-            //var jsonformatedEmployeeFromFile = File.ReadAllText(filePath);
-            //List<Employee> employeelist = new List<Employee>();
-            //employeelist = JsonConvert.DeserializeObject<List<Employee>>(jsonformatedEmployeeFromFile);
+            var jsonformatedEmployeeFromFile = File.ReadAllText(filePath);
+            List<Employee> employeelist = new List<Employee>();
+            employeelist = JsonConvert.DeserializeObject<List<Employee>>(jsonformatedEmployeeFromFile);
 
 
+            employeelist.Remove(entity);
 
             //if (employeelist.Find(entity) != null)
             //{
-            //    employeelist.Remove(entity);
-            //    return employeelist;
-            //}
 
-            //var jsonFormatedEmployee = JsonConvert.SerializeObject(employeelist);
-            //if (System.IO.File.Exists(filePath) != false)
-            //{
-            //    System.IO.File.WriteAllText(filePath, jsonFormatedEmployee);
             //}
-            //else
-            //{
-            //    System.IO.File.Delete(filePath);
-            //}
+            var jsonFormatedEmployee = JsonConvert.SerializeObject(employeelist);
+            if (System.IO.File.Exists(filePath) != false)
+            {
+                System.IO.File.WriteAllText(filePath, jsonFormatedEmployee);
+            }
+            else
+            {
+                System.IO.File.Delete(filePath);
+            }
 
-            //if (jsonFormatedEmployee != null)
-            //{
-            //    return true;
-            //}
+
+            if (jsonFormatedEmployee != null)
+            {
+                return true;
+            }
             return false;
+
+
 
         }
 
         public Employee Get(Predicate<Employee> filter = null)
         {
+
+            string filePath = @"C:\Users\kamra\Desktop\Files\Database.json";
+
+            var jsonformatedEmployeeFromFile = File.ReadAllText(filePath);
+            List<Employee> employeelist = new List<Employee>();
+            employeelist = JsonConvert.DeserializeObject<List<Employee>>(jsonformatedEmployeeFromFile);
             throw new NotImplementedException();
+
+            employeelist.Find(filter);
+          
             //try
             //{
             //    Employee fakeEmployee = new Employee();

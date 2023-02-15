@@ -20,6 +20,9 @@ while (whileresult)
                 employeeController.CreateEmployee();
                 break;
 
+            case (int)Helper.Buttons.DeleteEmployee:
+                employeeController.DeleteEmployee();
+                break ;
             default:
                 break;
         }
