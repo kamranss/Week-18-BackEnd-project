@@ -52,29 +52,39 @@ namespace HRApp.Controller
         public void GetAllEmployees()
         {
             List<Employee> employeeListInfo = new List<Employee>();
-            employeeService.GetAll();
-            int count = 0;
-            foreach (var item in employeeListInfo)
+            employeeListInfo = employeeService.GetAll();
+            Helper.consolemessage(ConsoleColor.Green, ConsoleMessages.employeesList);
+            foreach (var item in employeeService.GetAll())
             {
-                count++;
+                Helper.consolemessage(ConsoleColor.Blue,
+                  $"Employee Id - {item.Id} " +
+                  $"Employee Name - {item.Name}  " +
+                  $"Employee Surname - {item.Surname} " +
+                  $"Department Name - {item.Department.Name} " +
+                  $"Employee Address - {item.Address}");
             }
-            if (count != 0)
-            {
-                Helper.consolemessage(ConsoleColor.Green, ConsoleMessages.employeesList);
-                foreach (var item in employeeService.GetAll())
-                {
-                    Helper.consolemessage(ConsoleColor.Blue,
-                      $"Employee Id - {item.Id} " +
-                      $"Employee Name - {item.Name}  " +
-                      $"Employee Surname - {item.Surname} " +
-                      $"Department Name - {item.Department.Name} " +
-                      $"Employee Address - {item.Address}");
-                }
-            }
-            else
-            {
-                Helper.consolemessage(ConsoleColor.DarkRed, "There is no Employee in Database");
-            }
+            //int count = 0;
+            //foreach (var item in employeeListInfo)
+            //{
+            //    count++;
+            //}
+            //if (count != 0)
+            //{
+            //    Helper.consolemessage(ConsoleColor.Green, ConsoleMessages.employeesList);
+            //    foreach (var item in employeeService.GetAll())
+            //    {
+            //        Helper.consolemessage(ConsoleColor.Blue,
+            //          $"Employee Id - {item.Id} " +
+            //          $"Employee Name - {item.Name}  " +
+            //          $"Employee Surname - {item.Surname} " +
+            //          $"Department Name - {item.Department.Name} " +
+            //          $"Employee Address - {item.Address}");
+            //    }
+            //}
+            //else
+            //{
+            //    Helper.consolemessage(ConsoleColor.DarkRed, "There is no Employee in Database");
+            //}
 
         }
 
