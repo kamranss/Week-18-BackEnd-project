@@ -105,9 +105,8 @@ namespace DataAccess.Repositories
 
             var jsonformatedEmployeeFromFile = File.ReadAllText(filePath);
             List<Employee> employeelist = new List<Employee>();
-            employeelist = JsonConvert.DeserializeObject<List<Employee>>(jsonformatedEmployeeFromFile);
+            //employeelist = JsonConvert.DeserializeObject<List<Employee>>(jsonformatedEmployeeFromFile);
             throw new NotImplementedException();
-
             employeelist.Find(filter);
           
             //try
@@ -125,7 +124,13 @@ namespace DataAccess.Repositories
 
         public List<Employee> GetAll(Predicate<Employee> filter = null)
         {
-            throw new NotImplementedException();
+            string filePath = @"C:\Users\kamra\Desktop\Files\Database.json";
+
+            var jsonformatedEmployeeFromFile = File.ReadAllText(filePath);
+            List<Employee> employeelist = new List<Employee>();
+            employeelist = JsonConvert.DeserializeObject<List<Employee>>(jsonformatedEmployeeFromFile);
+            return employeelist;
+
             //try
             //{
             //    return filter != null ? AppDbContext.Employees.FindAll(filter) : AppDbContext.Employees;

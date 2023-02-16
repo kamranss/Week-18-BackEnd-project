@@ -12,7 +12,8 @@ namespace Utilities.Helpers
         {
             CreateEmployee = 1,
             DeleteEmployee,
-            UpdateEmployee
+            UpdateEmployee,
+            GetAllEmployee
            
         }
 

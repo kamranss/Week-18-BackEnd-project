@@ -23,6 +23,9 @@ while (whileresult)
             case (int)Helper.Buttons.DeleteEmployee:
                 employeeController.DeleteEmployee();
                 break ;
+            case (int)Helper.Buttons.GetAllEmployee:
+                employeeController.GetAllEmployees();
+                break;
             default:
                 break;
         }

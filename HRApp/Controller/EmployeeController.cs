@@ -14,7 +14,7 @@ namespace HRApp.Controller
     public class EmployeeController
     {
         EmployeeService employeeService;
-
+        EmployeeRepository employeeRepository;
         public EmployeeController()
         {
             employeeService = new EmployeeService();
@@ -100,12 +100,12 @@ namespace HRApp.Controller
             }
         }
 
-        #region  should be updated
 
+        #region UpdateEmployee
         //public void UpdateEmployee()
         //{
         //    GetAllEmployees();
-        //WriteEmployeeIdAgain: Helper.consolemessage(ConsoleColor.Green, ConsoleMessages.writeEmployeeIdForUpdate);
+        //    WriteEmployeeIdAgain: Helper.consolemessage(ConsoleColor.Green, ConsoleMessages.writeEmployeeIdForUpdate);
         //    string selectedId = Console.ReadLine();
         //    int id;
         //    bool convertedId = int.TryParse(selectedId, out id);
@@ -116,7 +116,7 @@ namespace HRApp.Controller
         //        {
         //        writeDepartmentNameagain: Helper.consolemessage(ConsoleColor.Green, ConsoleMessages.writeDepartmentName);
         //            string departmentName = Console.ReadLine();
-        //            Department foundDepartment = departmentService1.Get(departmentName);
+        //            Department foundDepartment = departmentService.Get(departmentName);
         //            if (foundDepartment != null)
         //            {
         //                int countCapacity = 0;
@@ -196,12 +196,17 @@ namespace HRApp.Controller
         //    }
 
         //}
+        #endregion
+
+        #region CountAllEmployee
         //public void CountAllEmployee()
         //{
         //    Helper.consolemessage(ConsoleColor.Green, " The number of employees in Database displayed");
         //    Console.WriteLine(employeeService.GetAllEmployeeCount());
         //}
+        #endregion
 
+        #region Get Employee by Id
         //public void GetEmployeeById()
         //{
 
@@ -231,7 +236,6 @@ namespace HRApp.Controller
         //    }
 
         //}
-
         #endregion
 
     }
